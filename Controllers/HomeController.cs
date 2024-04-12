@@ -8,19 +8,17 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    private readonly Data _data;
+    public HomeController(ILogger<HomeController> logger ,Data data)
     {
         _logger = logger;
+        _data = data;
     }
 
     public IActionResult Index()
     {
-        return View();
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
+        var Data = _data.GetData();
+        return View(Data);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
