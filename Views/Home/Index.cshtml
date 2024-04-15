@@ -3,13 +3,25 @@
   ViewData["Title"] = "Home Page";
 }
 
-<table>
+<select id=mySelect>
+  <option value="id">id</option>
+  <option value="gender">gender</option>
+  <option value="datetime">datetime</option>
+  <option value="number">number</option>
+</select>
+&nbsp;&nbsp;
+
+<input type="text" id="inputtext" />
+
+<button id="searchButton">查詢</button>
+<br /><br />
+<table id="table">
   <tr>
     <td>id</td>
     <td>first_name</td>
     <td>last_name</td>
     <td>gender</td>
-    <td>datatime</td>
+    <td>datetime</td>
     <td>number</td>
   </tr>
   @if (Model != null)
@@ -21,7 +33,7 @@
         <td>@item.first_name</td>
         <td>@item.last_name</td>
         <td>@item.gender</td>
-        <td>@item.datatime</td>
+        <td>@item.datetime</td>
         <td>@item.number</td>
       </tr>
     }
