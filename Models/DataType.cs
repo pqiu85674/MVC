@@ -2,12 +2,14 @@ namespace MVC.Models
 {
     public class Datatype
     {
-        public int id { get; set; }
+        public int employeeID { get; set; }
         public string first_name { get; set; }
         public string last_name { get; set; }
+        public string email { get; set; }
+        public string phoneNumber { get; set; }
+        public DateTime? birthday { get; set; }
         public string gender{ get; set; }
-        public DateTime datetime{ get; set; }
-        public int number{ get; set; }
+        public string department { get; set; }
     }
     
 }

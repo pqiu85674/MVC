@@ -1,41 +1,16 @@
-﻿@model List<Datatype>
+﻿@model List<Users>
 @{
   ViewData["Title"] = "Home Page";
 }
-
 <select id=mySelect>
-  <option value="id">id</option>
-  <option value="gender">gender</option>
-  <option value="datetime">datetime</option>
-  <option value="number">number</option>
+  <option value="users">users</option>
+  <option value="products">products</option>
+    <option value="shopCar">shopCar</option>
+    <option value="join">join</option>
 </select>
-&nbsp;&nbsp;
+<br />
+<br />
 
-<input type="text" id="inputtext" />
-
-<button id="searchButton">查詢</button>
-<br /><br />
-<table id="table">
-  <tr>
-    <td>id</td>
-    <td>first_name</td>
-    <td>last_name</td>
-    <td>gender</td>
-    <td>datetime</td>
-    <td>number</td>
-  </tr>
-  @if (Model != null)
-  {
-    @foreach (var item in Model)
-    {
-      <tr>
-        <td>@item.id</td>
-        <td>@item.first_name</td>
-        <td>@item.last_name</td>
-        <td>@item.gender</td>
-        <td>@item.datetime</td>
-        <td>@item.number</td>
-      </tr>
-    }
-  }
-</table>
+<div class="d-xl-flex flex-row flex-nowrap gap-4">
+    <table id="table"></table>
+</div>
